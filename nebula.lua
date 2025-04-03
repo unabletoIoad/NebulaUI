@@ -772,7 +772,7 @@ function library:Introduction()
     nebula.BackgroundTransparency = 1.000
     nebula.Size = UDim2.new(0, 80, 0, 21)
     nebula.Font = Enum.Font.Code
-    nebula.Text = "powered by nebula"
+    nebula.Text = "Nebula X"
     nebula.TextColor3 = Color3.fromRGB(124, 124, 124)
     nebula.TextSize = 10.000
     nebula.TextTransparency = 1
