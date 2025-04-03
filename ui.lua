@@ -763,7 +763,7 @@ function library:Introduction()
     hashLogo.Size = UDim2.new(0, 150, 0, 150)
     hashLogo.Visible = true
     hashLogo.Image = "http://www.roblox.com/asset/?id=130779083125401"
-    hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    hashLogo.ImageColor3 = Color3.fromRGB(255, 255, 255)
     hashLogo.ImageTransparency = 1
     
     Vortex.Name = "Vortex"
@@ -784,9 +784,9 @@ function library:Introduction()
     text.Position = UDim2.new(0.912751675, 0, 0, 0)
     text.Size = UDim2.new(0, 26, 0, 21)
     text.Font = Enum.Font.Code
-    text.Text = "hash"
+    text.Text = "1.0.0"
     text.TextColor3 = Color3.fromRGB(124, 124, 124)
-    text.TextSize = 10.000
+    text.TextSize = 9.000
     text.TextTransparency = 1
     text.RichText = true
     
