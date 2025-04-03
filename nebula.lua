@@ -72,7 +72,7 @@ end
 
 local library = {
     version = "1.0.0",
-    title = title or "Nebula X " .. tostring(math.random(1,366)),
+    title = title or "Vortex Hub" .. tostring(math.random(1,366)),
     fps = 0,
     rank = "private"
 }
@@ -194,7 +194,7 @@ function library:Watermark(text)
         end
     end
 
-    tetx = text or "Nebula X"
+    tetx = text or "Vortex Hub"
 
     local watermark = Instance.new("ScreenGui")
     local watermarkPadding = Instance.new("UIPadding")
@@ -318,7 +318,7 @@ function library:Watermark(text)
 
     local WatermarkFunctions = {}
     function WatermarkFunctions:AddWatermark(text)
-        tetx = text or "Nebula X"
+        tetx = text or "Vortex Hub"
 
         local edge = Instance.new("Frame")
         local edgeCorner = Instance.new("UICorner")
@@ -684,9 +684,9 @@ function library:Introduction()
     local bar = Instance.new("Frame")
     local barCorner = Instance.new("UICorner")
     local barLayout = Instance.new("UIListLayout")
-    local nebulaLogo = Instance.new("ImageLabel")
+    local VortexLogo = Instance.new("ImageLabel")
     local hashLogo = Instance.new("ImageLabel")
-    local nebula = Instance.new("TextLabel")
+    local Vortex = Instance.new("TextLabel")
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
     
@@ -742,17 +742,17 @@ function library:Introduction()
     barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
-    nebulaLogo.Name = "nebulaLogo"
-    nebulaLogo.Parent = background
-    nebulaLogo.AnchorPoint = Vector2.new(0.5, 0.5)
-    nebulaLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    nebulaLogo.BackgroundTransparency = 1.000
-    nebulaLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
-    nebulaLogo.Size = UDim2.new(0, 448, 0, 150)
-    nebulaLogo.Visible = true
-    nebulaLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
-    nebulaLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
-    nebulaLogo.ImageTransparency = 1
+    VortexLogo.Name = "VortexLogo"
+    VortexLogo.Parent = background
+    VortexLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+    VortexLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    VortexLogo.BackgroundTransparency = 1.000
+    VortexLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+    VortexLogo.Size = UDim2.new(0, 448, 0, 150)
+    VortexLogo.Visible = true
+    VortexLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
+    VortexLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    VortexLogo.ImageTransparency = 1
     
     hashLogo.Name = "hashLogo"
     hashLogo.Parent = background
@@ -762,20 +762,20 @@ function library:Introduction()
     hashLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
     hashLogo.Size = UDim2.new(0, 150, 0, 150)
     hashLogo.Visible = true
-    hashLogo.Image = "http://www.roblox.com/asset/?id=9365069861"
+    hashLogo.Image = "http://www.roblox.com/asset/?id=130779083125401"
     hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
     hashLogo.ImageTransparency = 1
     
-    nebula.Name = "nebula"
-    nebula.Parent = background
-    nebula.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    nebula.BackgroundTransparency = 1.000
-    nebula.Size = UDim2.new(0, 80, 0, 21)
-    nebula.Font = Enum.Font.Code
-    nebula.Text = "Nebula X"
-    nebula.TextColor3 = Color3.fromRGB(124, 124, 124)
-    nebula.TextSize = 10.000
-    nebula.TextTransparency = 1
+    Vortex.Name = "Vortex"
+    Vortex.Parent = background
+    Vortex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Vortex.BackgroundTransparency = 1.000
+    Vortex.Size = UDim2.new(0, 80, 0, 21)
+    Vortex.Font = Enum.Font.Code
+    Vortex.Text = "Vortex Hub"
+    Vortex.TextColor3 = Color3.fromRGB(124, 124, 124)
+    Vortex.TextSize = 10.000
+    Vortex.TextTransparency = 1
     
     text.Name = "text"
     text.Parent = background
@@ -796,12 +796,12 @@ function library:Introduction()
     pageLayout.SortOrder = Enum.SortOrder.LayoutOrder
     pageLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 
-    CreateTween("nebulaRotation", 0)
+    CreateTween("VortexRotation", 0)
     local MinusAmount = -16
     coroutine.wrap(function()
         while wait() do
             MinusAmount = MinusAmount + 0.4
-            TweenService:Create(nebulaLogo, TweenTable["nebulaRotation"], {Rotation = nebulaLogo.Rotation - MinusAmount}):Play()
+            TweenService:Create(VortexLogo, TweenTable["VortexRotation"], {Rotation = VortexLogo.Rotation - MinusAmount}):Play()
         end
     end)()
 
@@ -810,12 +810,12 @@ function library:Introduction()
     wait(.2)
     TweenService:Create(bar, TweenTable["introduction"], {Size = UDim2.new(0, 298, 0, 1)}):Play()
     wait(.2)
-    TweenService:Create(nebula, TweenTable["introduction"], {TextTransparency = 0}):Play()
+    TweenService:Create(Vortex, TweenTable["introduction"], {TextTransparency = 0}):Play()
     TweenService:Create(text, TweenTable["introduction"], {TextTransparency = 0}):Play()
     wait(.3)
-    TweenService:Create(nebulaLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
+    TweenService:Create(VortexLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
     wait(2)
-    TweenService:Create(nebulaLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
+    TweenService:Create(VortexLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
     wait(.2)
     TweenService:Create(hashLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
     wait(2)
@@ -823,7 +823,7 @@ function library:Introduction()
     wait(.1)
     TweenService:Create(text, TweenTable["introduction"], {TextTransparency = 1}):Play()
     wait(.1)
-    TweenService:Create(nebula, TweenTable["introduction"], {TextTransparency = 1}):Play()
+    TweenService:Create(Vortex, TweenTable["introduction"], {TextTransparency = 1}):Play()
     wait(.1)
     TweenService:Create(bar, TweenTable["introduction"], {Size = UDim2.new(0, 0, 0, 1)}):Play()
     wait(.1)
